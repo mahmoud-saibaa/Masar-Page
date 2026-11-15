@@ -6,6 +6,19 @@
   <title>مسار | رفيق البكالوريا العلمي في سوريا</title>
   <meta name="description" content="تطبيق مسار لتنظيم دراسة البكالوريا العلمي في سوريا - أوفلاين بالكامل، مجاني، وبدون إعلانات بحجم 3 ميغابايت فقط." />
   <meta name="theme-color" content="#0D9488" />
+
+  <!-- أيقونة التبويب (Favicon) -->
+  <link rel="icon" type="image/png" href="app_icon.png" />
+  <link rel="shortcut icon" type="image/png" href="app_icon.png" />
+  <link rel="apple-touch-icon" href="app_icon.png" />
+
+  <!-- وسوم المعاينة عند مشاركة الرابط على تلغرام وواتساب -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="تطبيق مسار | رفيق البكالوريا العلمي في سوريا" />
+  <meta property="og:description" content="كل منهاجك، مراجعاتك التلقائية، نوطاتك PDF، جدولك الأسبوعي، وامتحاناتك في تطبيق أندرويد واحد سريع ومجاني بالكامل." />
+  <meta property="og:image" content="https://mahnoudplay-arch.github.io/Landing-Page-For-Masar-Application/app_icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
@@ -270,12 +283,81 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      cursor: zoom-in;
+      transition: transform 0.22s ease, border-color 0.22s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shot-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(45, 212, 191, 0.45);
     }
 
     .shot-card img {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .shot-caption {
+      padding: 10px 14px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--mint);
+      text-align: center;
+      background: rgba(7, 19, 22, 0.55);
+      border-top: 1px solid var(--border);
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(4, 12, 14, 0.92);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .lightbox-content img {
+      width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -14px;
+      left: -10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
     }
 
     /* Features Grid */
@@ -519,17 +601,29 @@
       </div>
     </section>
 
-    <!-- Optional Promo Screenshots Section (auto-hides missing images cleanly) -->
+    <!-- Promo Screenshots Section -->
     <section id="gallery-section">
       <div class="section-head">
         <h2>نظرة من داخل التطبيق</h2>
-        <p>واجهة عربية هادئة مصممة للتركيز وتقليل التشتت</p>
+        <p>اضغط على أي صورة لتكبيرها — واجهة عربية هادئة مصممة للتركيز وتقليل التشتت</p>
       </div>
       <div class="gallery-grid" id="gallery-grid">
-        <div class="shot-card"><img src="promo_1.png" alt="تطبيق مسار 1" loading="lazy" onerror="handleMissingShot(this)" /></div>
-        <div class="shot-card"><img src="promo_2.png" alt="تطبيق مسار 2" loading="lazy" onerror="handleMissingShot(this)" /></div>
-        <div class="shot-card"><img src="promo_3.png" alt="تطبيق مسار 3" loading="lazy" onerror="handleMissingShot(this)" /></div>
-        <div class="shot-card"><img src="promo_4.png" alt="تطبيق مسار 4" loading="lazy" onerror="handleMissingShot(this)" /></div>
+        <div class="shot-card" onclick="openLightbox(this)">
+          <img src="promo_1.png" data-base="promo_1" alt="تطبيق مسار - الشاشة الرئيسية" loading="lazy" onerror="handleShotFallback(this)" />
+          <div class="shot-caption">الشاشة الرئيسية ومهام اليوم</div>
+        </div>
+        <div class="shot-card" onclick="openLightbox(this)">
+          <img src="promo_2.png" data-base="promo_2" alt="تطبيق مسار - منهاجك ومرفقاتك" loading="lazy" onerror="handleShotFallback(this)" />
+          <div class="shot-caption">منهاجك ومرفقاتك بمكان واحد</div>
+        </div>
+        <div class="shot-card" onclick="openLightbox(this)">
+          <img src="promo_3.png" data-base="promo_3" alt="تطبيق مسار - نظم وقتك وتابع إنجازك" loading="lazy" onerror="handleShotFallback(this)" />
+          <div class="shot-caption">مؤقت التركيز والجدول الأسبوعي</div>
+        </div>
+        <div class="shot-card" onclick="openLightbox(this)">
+          <img src="promo_4.png" data-base="promo_4" alt="تطبيق مسار - امتحاناتك وشروحاتك" loading="lazy" onerror="handleShotFallback(this)" />
+          <div class="shot-caption">امتحاناتك وشروحاتك بدون تشتت</div>
+        </div>
       </div>
     </section>
 
@@ -683,8 +777,27 @@
     </div>
   </footer>
 
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="إغلاق" onclick="closeLightbox(event)">×</button>
+      <img id="lightbox-img" src="" alt="معاينة الصورة" />
+    </div>
+  </div>
+
   <script>
-    function handleMissingShot(img) {
+    // تجربة امتدادات متعددة للصور تلقائياً قبل إخفاء البطاقة
+    function handleShotFallback(img) {
+      var base = img.getAttribute('data-base');
+      var exts = ['jpg', 'jpeg', 'webp', 'PNG', 'JPG'];
+      var idx = parseInt(img.getAttribute('data-try') || '0', 10);
+
+      if (base && idx < exts.length) {
+        img.setAttribute('data-try', String(idx + 1));
+        img.src = base + '.' + exts[idx];
+        return;
+      }
+
       var card = img.closest('.shot-card');
       if (card) card.remove();
       var grid = document.getElementById('gallery-grid');
@@ -693,6 +806,28 @@
         section.classList.add('hidden');
       }
     }
+
+    function openLightbox(card) {
+      var img = card.querySelector('img');
+      if (!img) return;
+      var lb = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lightbox-img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('open');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox').classList.remove('open');
+      }
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('open');
+      }
+    });
   </script>
 </body>
 </html>
