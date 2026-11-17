@@ -3,22 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مسار | رفيق البكالوريا العلمي في سوريا</title>
-  <meta name="description" content="تطبيق مسار لتنظيم دراسة البكالوريا العلمي في سوريا - أوفلاين بالكامل، مجاني، وبدون إعلانات بحجم 3 ميغابايت فقط." />
+  <title>مسار v2.0 | رفيق البكالوريا العلمي والأدبي في سورية</title>
+  <meta name="description" content="تطبيق مسار لتنظيم دراسة البكالوريا العلمي والأدبي في سورية - أوفلاين بالكامل، مجاني، وبدون إعلانات." />
   <meta name="theme-color" content="#0D9488" />
-
-  <!-- أيقونة التبويب (Favicon) -->
-  <link rel="icon" type="image/png" href="app_icon.png" />
-  <link rel="shortcut icon" type="image/png" href="app_icon.png" />
-  <link rel="apple-touch-icon" href="app_icon.png" />
-
-  <!-- وسوم المعاينة عند مشاركة الرابط على تلغرام وواتساب -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="تطبيق مسار | رفيق البكالوريا العلمي في سوريا" />
-  <meta property="og:description" content="كل منهاجك، مراجعاتك التلقائية، نوطاتك PDF، جدولك الأسبوعي، وامتحاناتك في تطبيق أندرويد واحد سريع ومجاني بالكامل." />
-  <meta property="og:image" content="https://mahnoudplay-arch.github.io/Landing-Page-For-Masar-Application/app_icon.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
@@ -36,15 +23,8 @@
       --amber: #f59e0b;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -54,10 +34,7 @@
       min-height: 100vh;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       width: 100%;
@@ -66,14 +43,13 @@
       padding: 0 18px;
     }
 
-    /* Top Bar */
     .navbar {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      background: rgba(7, 19, 22, 0.82);
+      background: rgba(7, 19, 22, 0.84);
       border-bottom: 1px solid var(--border);
     }
 
@@ -105,11 +81,7 @@
       box-shadow: 0 6px 18px rgba(20, 184, 166, 0.25);
     }
 
-    .brand-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .brand-icon img { width: 100%; height: 100%; object-fit: cover; }
 
     .nav-cta {
       background: linear-gradient(135deg, var(--teal), var(--teal-bright));
@@ -121,16 +93,9 @@
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
-    }
+    .nav-cta:hover { transform: translateY(-1px); opacity: 0.95; }
 
-    /* Hero */
-    .hero {
-      padding: 46px 0 36px;
-      text-align: center;
-    }
+    .hero { padding: 46px 0 34px; text-align: center; }
 
     .hero-logo-wrap {
       width: 96px;
@@ -145,11 +110,7 @@
       border: 1px solid rgba(153, 246, 228, 0.25);
     }
 
-    .hero-logo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .hero-logo-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
     .hero-pill {
       display: inline-flex;
@@ -170,16 +131,13 @@
       font-weight: 900;
       line-height: 1.3;
       margin-bottom: 14px;
-      letter-spacing: -0.01em;
     }
 
-    .hero h1 span {
-      color: var(--teal-bright);
-    }
+    .hero h1 span { color: var(--teal-bright); }
 
     .hero-desc {
-      max-width: 650px;
-      margin: 0 auto 28px;
+      max-width: 670px;
+      margin: 0 auto 26px;
       color: var(--text-muted);
       font-size: 1.05rem;
     }
@@ -189,7 +147,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
     .btn-primary {
@@ -227,8 +185,28 @@
       transition: background 0.2s ease;
     }
 
-    .btn-secondary:hover {
-      background: #18343d;
+    .btn-secondary:hover { background: #18343d; }
+
+    .download-counter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(19, 40, 47, 0.9);
+      border: 1px solid rgba(45, 212, 191, 0.28);
+      color: #ccfbf1;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 7px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .counter-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal-bright);
+      box-shadow: 0 0 8px var(--teal-bright);
     }
 
     .specs-bar {
@@ -236,7 +214,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
     .spec-chip {
@@ -249,28 +227,11 @@
       border-radius: 12px;
     }
 
-    /* Section Headings */
-    section {
-      padding: 38px 0;
-    }
+    section { padding: 38px 0; }
+    .section-head { text-align: center; margin-bottom: 28px; }
+    .section-head h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); font-weight: 800; margin-bottom: 6px; }
+    .section-head p { color: var(--text-muted); font-size: 0.98rem; }
 
-    .section-head {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(1.4rem, 3.5vw, 2rem);
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .section-head p {
-      color: var(--text-muted);
-      font-size: 0.98rem;
-    }
-
-    /* Promo Gallery */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -283,84 +244,10 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-      cursor: zoom-in;
-      transition: transform 0.22s ease, border-color 0.22s ease;
-      display: flex;
-      flex-direction: column;
     }
 
-    .shot-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(45, 212, 191, 0.45);
-    }
+    .shot-card img { width: 100%; height: auto; display: block; }
 
-    .shot-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .shot-caption {
-      padding: 10px 14px;
-      font-size: 0.86rem;
-      font-weight: 700;
-      color: var(--mint);
-      text-align: center;
-      background: rgba(7, 19, 22, 0.55);
-      border-top: 1px solid var(--border);
-    }
-
-    /* Lightbox Modal */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(4, 12, 14, 0.92);
-      backdrop-filter: blur(8px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .lightbox.open {
-      display: flex;
-    }
-
-    .lightbox-content {
-      position: relative;
-      max-width: 540px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .lightbox-content img {
-      width: 100%;
-      max-height: 85vh;
-      object-fit: contain;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: -14px;
-      left: -10px;
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: #ffffff;
-      font-size: 1.2rem;
-      font-weight: 800;
-      cursor: pointer;
-      display: grid;
-      place-items: center;
-    }
-
-    /* Features Grid */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -375,10 +262,7 @@
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .feature-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(45, 212, 191, 0.42);
-    }
+    .feature-card:hover { transform: translateY(-3px); border-color: rgba(45, 212, 191, 0.42); }
 
     .feature-icon {
       width: 46px;
@@ -391,20 +275,9 @@
       margin-bottom: 14px;
     }
 
-    .feature-card h3 {
-      font-size: 1.08rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      color: #ffffff;
-    }
+    .feature-card h3 { font-size: 1.08rem; font-weight: 800; margin-bottom: 6px; color: #ffffff; }
+    .feature-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; }
 
-    .feature-card p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* Install Guide */
     .install-box {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -438,16 +311,8 @@
       margin-bottom: 10px;
     }
 
-    .step-item h4 {
-      font-size: 1rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .step-item p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
+    .step-item h4 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+    .step-item p { font-size: 0.9rem; color: var(--text-muted); }
 
     .play-protect-note {
       margin-top: 18px;
@@ -459,13 +324,7 @@
       font-size: 0.92rem;
     }
 
-    /* FAQ */
-    .faq-list {
-      display: grid;
-      gap: 12px;
-      max-width: 820px;
-      margin: 0 auto;
-    }
+    .faq-list { display: grid; gap: 12px; max-width: 820px; margin: 0 auto; }
 
     details {
       background: var(--bg-card);
@@ -484,17 +343,9 @@
       gap: 10px;
     }
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+    summary::-webkit-details-marker { display: none; }
+    details p { margin-top: 10px; color: var(--text-muted); font-size: 0.94rem; }
 
-    details p {
-      margin-top: 10px;
-      color: var(--text-muted);
-      font-size: 0.94rem;
-    }
-
-    /* Footer & Dua Card */
     .dua-card {
       background: linear-gradient(135deg, rgba(13, 148, 136, 0.16), rgba(14, 30, 35, 0.95));
       border: 1px solid rgba(45, 212, 191, 0.32);
@@ -504,19 +355,8 @@
       margin-top: 10px;
     }
 
-    .dua-card h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--mint);
-      margin-bottom: 8px;
-    }
-
-    .dua-card p {
-      max-width: 680px;
-      margin: 0 auto 20px;
-      color: #e2e8f0;
-      font-size: 0.98rem;
-    }
+    .dua-card h3 { font-size: 1.25rem; font-weight: 800; color: var(--mint); margin-bottom: 8px; }
+    .dua-card p { max-width: 680px; margin: 0 auto 20px; color: #e2e8f0; font-size: 0.98rem; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -527,18 +367,12 @@
       margin-top: 24px;
     }
 
-    footer strong {
-      color: var(--text);
-    }
-
-    .hidden {
-      display: none !important;
-    }
+    footer strong { color: var(--text); }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
 
-  <!-- Top Navbar -->
   <header class="navbar">
     <div class="container navbar-inner">
       <div class="brand">
@@ -552,14 +386,13 @@
         </div>
         <span>مسار</span>
       </div>
-      <a class="nav-cta" href="https://www.mediafire.com/file/gabrtqy46uio9kt/Masar-v1.0.apk/file" target="_blank" rel="noopener noreferrer">
-        تحميل APK
+      <a class="nav-cta download-link" href="https://www.mediafire.com/file/uieiosq4f8l01hv/Masar-v2.0.apk/file" target="_blank" rel="noopener noreferrer">
+        تحميل v2.0
       </a>
     </div>
   </header>
 
   <main class="container">
-    <!-- Hero -->
     <section class="hero">
       <div class="hero-logo-wrap">
         <img src="app_icon.png" alt="أيقونة تطبيق مسار" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
@@ -570,68 +403,58 @@
         </svg>
       </div>
 
-      <div class="hero-pill">البكالوريا العلمي في سوريا • الإصدار 1.0</div>
+      <div class="hero-pill">البكالوريا العلمي والأدبي في سورية • الإصدار 2.0</div>
 
       <h1>تطبيق <span>مسار</span> — رفيقك الذكي لتنظيم دراسة البكالوريا</h1>
 
       <p class="hero-desc">
-        كل منهاجك، مراجعاتك التلقائية، نوطاتك PDF، جدولك الأسبوعي، وامتحاناتك في تطبيق أندرويد واحد سريع،
-        مجاني بالكامل، وبدون إعلانات.
+        كل منهاج العلمي والأدبي، مراجعاتك التلقائية، نوطاتك PDF، جدولك الأسبوعي، عدادك الطافي، وامتحاناتك في تطبيق أندرويد واحد سريع، مجاني بالكامل، وبدون إعلانات.
       </p>
 
       <div class="cta-group">
-        <a class="btn-primary" href="https://www.mediafire.com/file/gabrtqy46uio9kt/Masar-v1.0.apk/file" target="_blank" rel="noopener noreferrer">
+        <a class="btn-primary download-link" href="https://www.mediafire.com/file/uieiosq4f8l01hv/Masar-v2.0.apk/file" target="_blank" rel="noopener noreferrer">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          تحميل التطبيق للأندرويد (MediaFire)
+          تحميل مسار v2.0 للأندرويد (MediaFire)
         </a>
         <a class="btn-secondary" href="#install-guide">
           طريقة التثبيت الآمن
         </a>
       </div>
 
+      <div class="download-counter-badge" id="counter-badge">
+        <span class="counter-dot"></span>
+        <span>عدد مرّات الضغط على التحميل: <strong id="download-count">...</strong></span>
+      </div>
+
       <div class="specs-bar">
-        <span class="spec-chip">الحجم: ~3 ميغابايت فقط</span>
+        <span class="spec-chip">للفرعين العلمي والأدبي</span>
         <span class="spec-chip">يعمل أوفلاين بالكامل</span>
         <span class="spec-chip">مجاني 100% بدون إعلانات</span>
         <span class="spec-chip">أندرويد 8.0 فأحدث</span>
       </div>
     </section>
 
-    <!-- Promo Screenshots Section -->
     <section id="gallery-section">
       <div class="section-head">
         <h2>نظرة من داخل التطبيق</h2>
-        <p>اضغط على أي صورة لتكبيرها — واجهة عربية هادئة مصممة للتركيز وتقليل التشتت</p>
+        <p>واجهة عربية هادئة مصممة للتركيز وتقليل التشتت</p>
       </div>
       <div class="gallery-grid" id="gallery-grid">
-        <div class="shot-card" onclick="openLightbox(this)">
-          <img src="promo_1.png" data-base="promo_1" alt="تطبيق مسار - الشاشة الرئيسية" loading="lazy" onerror="handleShotFallback(this)" />
-          <div class="shot-caption">الشاشة الرئيسية ومهام اليوم</div>
-        </div>
-        <div class="shot-card" onclick="openLightbox(this)">
-          <img src="promo_2.png" data-base="promo_2" alt="تطبيق مسار - منهاجك ومرفقاتك" loading="lazy" onerror="handleShotFallback(this)" />
-          <div class="shot-caption">منهاجك ومرفقاتك بمكان واحد</div>
-        </div>
-        <div class="shot-card" onclick="openLightbox(this)">
-          <img src="promo_3.png" data-base="promo_3" alt="تطبيق مسار - نظم وقتك وتابع إنجازك" loading="lazy" onerror="handleShotFallback(this)" />
-          <div class="shot-caption">مؤقت التركيز والجدول الأسبوعي</div>
-        </div>
-        <div class="shot-card" onclick="openLightbox(this)">
-          <img src="promo_4.png" data-base="promo_4" alt="تطبيق مسار - امتحاناتك وشروحاتك" loading="lazy" onerror="handleShotFallback(this)" />
-          <div class="shot-caption">امتحاناتك وشروحاتك بدون تشتت</div>
-        </div>
+        <div class="shot-card"><img src="promo_1.png" alt="تطبيق مسار 1" loading="lazy" onerror="handleMissingShot(this)" /></div>
+        <div class="shot-card"><img src="promo_2.png" alt="تطبيق مسار 2" loading="lazy" onerror="handleMissingShot(this)" /></div>
+        <div class="shot-card"><img src="promo_3.png" alt="تطبيق مسار 3" loading="lazy" onerror="handleMissingShot(this)" /></div>
+        <div class="shot-card"><img src="promo_4.png" alt="تطبيق مسار 4" loading="lazy" onerror="handleMissingShot(this)" /></div>
       </div>
     </section>
 
-    <!-- Features -->
     <section id="features">
       <div class="section-head">
-        <h2>شو بيقدملك تطبيق مسار؟</h2>
-        <p>مصمم على واقع دراسة طالب البكالوريا العلمي في سوريا</p>
+        <h2>شو بيقدملك تطبيق مسار v2.0؟</h2>
+        <p>مصمم على واقع دراسة طالب البكالوريا العلمي والأدبي في سورية</p>
       </div>
 
       <div class="features-grid">
@@ -639,24 +462,24 @@
           <div class="feature-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
-          <h3>المنهاج السوري العلمي كامل</h3>
-          <p>المواد الثماني كاملة ومرتبة بالوحدات والدروس وأرقام الصفحات، مع إمكانية التعديل أو استبعاد الدروس المحذوفة.</p>
+          <h3>منهاج العلمي والأدبي كامل</h3>
+          <p>جميع مواد الفرعين بالوحدات والدروس وأرقام الصفحات، مع اختيار الديانة (إسلامية/مسيحية) واللغة الثانية (فرنسي/روسي) واستبعاد المحذوف.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3>مراجعة متباعدة تلقائية</h3>
-          <p>بمجرد إتمام دراسة أي درس، يجدول التطبيق مواعيد مراجعته تلقائياً حسب صعوبته ويذكرك بها بصفحة اليوم.</p>
+          <h3>مؤقت طافي فوق التطبيقات</h3>
+          <p>عدّاد دراسي طافي يظهر فوق يوتيوب وملفات PDF (قابل لتعديل الشفافية واللون)، مع منبه دقيق بالخلفية وجدول أسبوعي وسلسلة التزام.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
           </div>
-          <h3>حقيبة مرفقات لكل درس</h3>
-          <p>أضف نوط PDF مع عارض مدمج، صور بضغط ذكي يحفظ الجودة، تسجيلات صوتية بأسلوب فاينمان، أو فيديوهات محلية بدون استهلاك مساحة.</p>
+          <h3>مرفقات + إشارات مرجعية PDF</h3>
+          <p>أضف نوط PDF (مع حفظ آخر صفحة وإشارات مرجعية)، صور مضغوطة، صوتيات وفيديو محلي مع تسريع (1x–2x) ومؤقت نوم.</p>
         </div>
 
         <div class="feature-card">
@@ -664,7 +487,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
           </div>
           <h3>استيراد سريع بالمشاركة</h3>
-          <p>من تلغرام أو يوتيوب أو مدير الملفات، اضغط "مشاركة" واختر مسار ليحفظلك الملف أو الرابط بمكانه الصحيح فوراً.</p>
+          <p>من تلغرام أو يوتيوب أو مدير الملفات، اضغط "مشاركة" واختر مسار ليحفظلك الملف أو الفيديو بمكانه فوراً (من الجهاز أو كرابط).</p>
         </div>
 
         <div class="feature-card">
@@ -672,41 +495,40 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
           </div>
           <h3>أكاديمية مصادري بدون تشتت</h3>
-          <p>أنشئ ملفاً لكل أستاذ أو منصة، رتب فيديوهاتهم في قوائم تشغيل مخصصة أو مستوردة، وشاهدها داخل التطبيق مع تتبع المشاهدة.</p>
+          <p>أنشئ ملفاً لكل أستاذ أو منصة، رتب فيديوهاتهم في قوائم تشغيل مخصصة أو مستوردة، واربطها بمؤقت التركيز مع تتبع المشاهدة.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <h3>قسم امتحاناتي والنماذج</h3>
-          <p>أضف نماذج الامتحان PDF، شغّل مؤقت امتحان حقيقي فوق الملف، رصد علامتك، وتابع تطور مستواك برسم بياني.</p>
+          <h3>امتحاناتي وسبر الدروس</h3>
+          <p>امتحانات عامة وأخرى خاصة بكل درس، مؤقت تنازلي أو تصاعدي فوق ملف الـ PDF، مع رسم بياني لتطور علاماتك.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
           </div>
-          <h3>جدول أسبوعي ومؤقت خلفي دقيق</h3>
-          <p>نظّم أسبوعك (دراسة ذاتية ومعهد)، وشغّل مؤقتاً تصاعدياً بالنسبة المئوية مع منبه دقيق بالخلفية و3 ويدجت للشاشة الرئيسية.</p>
+          <h3>مراجعة متباعدة واختبار الأخطاء</h3>
+          <p>جدولة تلقائية لمراجعة الدروس، ووضع «إخفاء الحلول» في دفتر الأخطاء لاختبار نفسك قبل كشف الإجابة الصحيحة.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
           </div>
-          <h3>دفتر الأخطاء والمعدل والـ ZIP</h3>
-          <p>اجمع أخطاءك المصورة من كل المواد، احسب مجموعك حسب التوزيع السوري، وصدّر نسخة احتياطية كاملة بملف ZIP.</p>
+          <h3>العدادات الزمنية والمعدل والـ ZIP</h3>
+          <p>أضف عدادات متعددة لمذاكراتك، احسب مجموع العلمي (2700) والأدبي (2400)، وصدّر أو شارك نسختك الاحتياطية بملف ZIP.</p>
         </div>
       </div>
     </section>
 
-    <!-- Install Guide -->
     <section id="install-guide">
       <div class="install-box">
         <div class="section-head" style="margin-bottom: 10px;">
-          <h2>طريقة التثبيت الآمن (خطوات بسيطة)</h2>
-          <p>التطبيق حجمه ~3 ميغابايت فقط ويتثبت خلال ثوانٍ</p>
+          <h2>طريقة التثبيت والتحديث الآمن</h2>
+          <p>لو كان عندك الإصدار 1.0، ثبّت v2.0 فوقه مباشرة دون حذفه حتى تحافظ على بياناتك</p>
         </div>
 
         <div class="steps-list">
@@ -718,7 +540,7 @@
           <div class="step-item">
             <span class="step-num">2</span>
             <h4>فتح الملف والسماح بالتثبيت</h4>
-            <p>افتح ملف <strong>Masar-v1.0.apk</strong> من إشعارات التحميل أو مجلد Downloads، واسمح بالتثبيت من هذا المصدر إن طُلب منك.</p>
+            <p>افتح ملف <strong>Masar-v2.0.apk</strong> من التنزيلات، واسمح بالتثبيت من هذا المصدر إن طُلب منك.</p>
           </div>
           <div class="step-item">
             <span class="step-num">3</span>
@@ -728,43 +550,41 @@
         </div>
 
         <div class="play-protect-note">
-          <strong>لماذا قد يظهر تنبيه Google Play Protect؟</strong> لأن التطبيق مشروع طلابي مجاني 100% وغير مرفوع على متجر Google Play؛ التنبيه يظهر تلقائياً لأي تطبيق APK يتم تحميله من خارج المتجر ولا يعني وجود أي مشكلة.
+          <strong>لماذا قد يظهر تنبيه Google Play Protect؟</strong> لأن التطبيق مشروع طلابي مجاني 100% وغير مرفوع على متجر Google Play؛ التنبيه يظهر تلقائياً لأي ملف APK يتم تحميله من خارج المتجر ولا يعني وجود أي مشكلة.
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq">
       <div class="section-head">
         <h2>أسئلة شائعة</h2>
       </div>
       <div class="faq-list">
         <details>
-          <summary>هل التطبيق يحتاج إنترنت ليعمل؟</summary>
-          <p>لا، 99% من التطبيق يعمل أوفلاين بالكامل (المنهاج، المرفقات، المؤقت، الجدول، امتحاناتي، المعدل، ودفتر الأخطاء). الإنترنت مطلوب فقط إذا فتحت فيديو يوتيوب من قسم مصادري أو مراجع الدرس.</p>
+          <summary>كيف أحدث من v1.0 إلى v2.0 بدون ما يضيع تعبي؟</summary>
+          <p>للاحتياط دائماً صدّر نسخة احتياطية ZIP من الإعدادات، ثم ثبّت ملف Masar-v2.0.apk مباشرة فوق النسخة القديمة دون حذفها، وستنتقل جميع دروسك ومرفقاتك وامتحاناتك تلقائياً.</p>
         </details>
         <details>
-          <summary>هل يستهلك التطبيق مساحة كبيرة من الموبايل؟</summary>
-          <p>أبداً؛ حجم التطبيق نفسه حوالي 3 ميغابايت فقط، والصور المرفقة تُضغط بذكاء لتوفير المساحة مع الحفاظ على وضوح الكتابة، أما الفيديوهات المحلية فتُربط دون نسخ الملف الضخم.</p>
+          <summary>هل التطبيق يحتاج إنترنت ليعمل؟</summary>
+          <p>لا، كل الميزات الأساسية تعمل أوفلاين بالكامل. الإنترنت مطلوب فقط عند تشغيل فيديوهات يوتيوب من قسم مصادري أو التحقق الصامت من توفر تحديثات جديدة للتطبيق.</p>
         </details>
         <details>
           <summary>كيف أضمن عدم ضياع بياناتي إذا فرمتت الجوال؟</summary>
-          <p>افتح القائمة الجانبية ← الإعدادات والنسخ الاحتياطي ← اضغط «تصدير نسخة احتياطية كاملة» واحفظ ملف الـ ZIP في مكان آمن أو في الرسائل المحفوظة على تلغرام، ويمكنك استرجاعه بلمسة واحدة في أي وقت.</p>
+          <p>افتح القائمة الجانبية ← الإعدادات والنسخ الاحتياطي ← اضغط «تصدير نسخة احتياطية كاملة» أو «مشاركة النسخة الاحتياطية» لحفظ ملف الـ ZIP في الرسائل المحفوظة على تلغرام.</p>
         </details>
       </div>
     </section>
 
-    <!-- Sadaka Jariya & Bottom CTA -->
     <section>
       <div class="dua-card">
-        <h3>هدية مجانية لوجه الله لطلاب البكالوريا العلمي</h3>
+        <h3>هدية مجانية لوجه الله لطلاب البكالوريا العلمي والأدبي</h3>
         <p>
           التطبيق مجاني تماماً بدون أي إعلانات أو اشتراكات؛ إن استفدت منه ولو بفكرة واحدة،
           لا تنسَ الدعاء لي بالتوفيق بالبكالوريا، وقراءة سورة الفاتحة والدعاء بالرحمة والمغفرة عن روح والدي المرحوم
           <strong>درويش صيبعة</strong>.
         </p>
-        <a class="btn-primary" href="https://www.mediafire.com/file/gabrtqy46uio9kt/Masar-v1.0.apk/file" target="_blank" rel="noopener noreferrer">
-          تحميل تطبيق مسار v1.0 الآن
+        <a class="btn-primary download-link" href="https://www.mediafire.com/file/uieiosq4f8l01hv/Masar-v2.0.apk/file" target="_blank" rel="noopener noreferrer">
+          تحميل تطبيق مسار v2.0 الآن
         </a>
       </div>
     </section>
@@ -772,32 +592,13 @@
 
   <footer>
     <div class="container">
-      <p><strong>تطبيق مسار</strong> • الإصدار 1.0 • تطوير الطالب: <strong>محمود صيبعة</strong></p>
-      <p style="margin-top: 4px;">مخصّص لطلاب البكالوريا العلمي في سوريا</p>
+      <p><strong>تطبيق مسار</strong> • الإصدار 2.0 • تطوير الطالب: <strong>محمود صيبعة</strong></p>
+      <p style="margin-top: 4px;">مخصّص لطلاب البكالوريا العلمي والأدبي في سورية</p>
     </div>
   </footer>
 
-  <!-- Lightbox Modal -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-content">
-      <button class="lightbox-close" type="button" aria-label="إغلاق" onclick="closeLightbox(event)">×</button>
-      <img id="lightbox-img" src="" alt="معاينة الصورة" />
-    </div>
-  </div>
-
   <script>
-    // تجربة امتدادات متعددة للصور تلقائياً قبل إخفاء البطاقة
-    function handleShotFallback(img) {
-      var base = img.getAttribute('data-base');
-      var exts = ['jpg', 'jpeg', 'webp', 'PNG', 'JPG'];
-      var idx = parseInt(img.getAttribute('data-try') || '0', 10);
-
-      if (base && idx < exts.length) {
-        img.setAttribute('data-try', String(idx + 1));
-        img.src = base + '.' + exts[idx];
-        return;
-      }
-
+    function handleMissingShot(img) {
       var card = img.closest('.shot-card');
       if (card) card.remove();
       var grid = document.getElementById('gallery-grid');
@@ -807,27 +608,42 @@
       }
     }
 
-    function openLightbox(card) {
-      var img = card.querySelector('img');
-      if (!img) return;
-      var lb = document.getElementById('lightbox');
-      var lbImg = document.getElementById('lightbox-img');
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
-      lb.classList.add('open');
-    }
+    (function () {
+      var COUNTER_KEY = 'masar_saibaa_v2_downloads';
+      var API_BASE = 'https://countapi.mileshilliard.com/api/v1';
+      var countEl = document.getElementById('download-count');
 
-    function closeLightbox(e) {
-      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
-        document.getElementById('lightbox').classList.remove('open');
+      function formatCount(val) {
+        var num = Number(val);
+        if (isNaN(num)) return '0';
+        return num.toLocaleString('en-US');
       }
-    }
 
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        document.getElementById('lightbox').classList.remove('open');
-      }
-    });
+      fetch(API_BASE + '/get/' + COUNTER_KEY)
+        .then(function (res) { return res.ok ? res.json() : { value: 0 }; })
+        .then(function (data) {
+          if (countEl) countEl.textContent = formatCount(data && data.value != null ? data.value : 0);
+        })
+        .catch(function () {
+          if (countEl) countEl.textContent = 'متاح الآن';
+        });
+
+      var links = document.querySelectorAll('.download-link');
+      links.forEach(function (link) {
+        link.addEventListener('click', function () {
+          try {
+            fetch(API_BASE + '/hit/' + COUNTER_KEY, { method: 'GET', keepalive: true })
+              .then(function (res) { return res.ok ? res.json() : null; })
+              .then(function (data) {
+                if (countEl && data && data.value != null) {
+                  countEl.textContent = formatCount(data.value);
+                }
+              })
+              .catch(function () {});
+          } catch (e) {}
+        });
+      });
+    })();
   </script>
 </body>
 </html>
