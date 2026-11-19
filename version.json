@@ -1,8 +1,8 @@
 {
-  "latestVersionCode": 9,
-  "latestVersionName": "2.6",
+  "latestVersionCode": 10,
+  "latestVersionName": "2.7",
   "downloadUrl": "https://mahmoud-saibaa.github.io/Masar-Page/",
-  "apkUrl": "https://github.com/mahmoud-saibaa/Masar-Page/releases/download/V2.6/Masar-v2.6.apk",
+  "apkUrl": "https://github.com/mahmoud-saibaa/Masar-Page/releases/download/V2.7/Masar-v2.7.apk",
   "added": [
     "الخرائط الذهنية داخل الدروس مع التصدير والاستيراد",
     "البطاقات التعليمية مع دعم CSV و JSON",
